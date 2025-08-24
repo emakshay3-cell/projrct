@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #6dd5fa, #2980b9);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            width: 350px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.5);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background: #f39c12;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            color: white;
+            transition: 0.3s;
+        }
+        .btn:hover {
+            transform: scale(0.95);
+            background: #d35400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Welcome to Home Page 🎉</h1>
+        <p id="welcomeText"></p>
+        <button class="btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // show logged in user mobile number
+        let userMobile = localStorage.getItem("mobno");
+        document.getElementById("welcomeText").innerText = 
+            "You are logged in with Mobile No: " + userMobile;
+
+        function logout(){
+            localStorage.removeItem("mobno");
+            localStorage.removeItem("passs");
+            alert("Logged Out Successfully ❌");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>
+</html>
