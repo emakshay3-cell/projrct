@@ -68,12 +68,12 @@
             <h2>Login Form</h2>
             <input type="number" id="mobileno" placeholder="ENTER YOUR MOBILE NUMBER">
             <input type="password" id="pass" placeholder="ENTER PASSWORD">
-
+            
             
             <input type="checkbox" id="remember">
             <label for="remember">Remember me</label>
             <div></div>
-            <button class="button1">LOGIN</button>
+            <button class="button1" onclick="run()">LOGIN</button>
             <div></div>
             <p style="font-size: small;">
                 Your Don't Have Account?:
@@ -82,4 +82,18 @@
             </p>
         </div>
     </body>
+    <script>
+        function run(){
+            let mobileno2=document.getElementById("mobileno").value;
+            let password2=document.getElementById("pass").value;
+
+            if (mobileno2=mobileno) and (password=password2);{
+                alert("hello")
+            }
+
+
+
+        }
+
+    </script>
 </html>
