@@ -87,8 +87,11 @@
             let mobileno2=document.getElementById("mobileno").value;
             let password2=document.getElementById("pass").value;
 
-            if (mobileno2=mobileno) and (password=password2);{
-                alert("hello")
+            let savedMobileno = localStorage.getItem("mobno");
+            let savedPassword = localStorage.getItem("passs");
+
+            if (mobileno2==savedMobileno && password==savedPassword);{
+                alert("Login Succesfull✅")
             }
 
 
